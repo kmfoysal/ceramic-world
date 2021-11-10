@@ -1,0 +1,289 @@
+[
+  {
+    "key": "B002RL8IYA",
+    "category": "DINNERWARE",
+    "name": "SERVING BOWL",
+    "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim voluptatibus aperiam tenetur laborum maxime dolorem culpa ipsa porro!",
+    "stock": 36,
+    "star": 3,
+    "starCount": 3245,
+    "img": "https://i.ibb.co/Xk4PC17/Serving-Bowl.jpg",
+    "size": [
+      {
+        "description": "Diameter",
+        "value": "6cm"
+      },
+      {
+        "description": "Height",
+        "value": "13cm"
+      }
+    ],
+    "price": 68.36,
+    "sellPrice": 48.36,
+    "shipping": 4.99
+  },
+
+  {
+    "key": "B002RL8IYB",
+    "category": "HOME DECOR",
+    "name": "LARGE VASE",
+    "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim voluptatibus aperiam tenetur laborum maxime dolorem culpa ipsa porro!",
+    "stock": 46,
+    "star": 4,
+    "starCount": 345,
+    "img": "https://i.ibb.co/fqx84Bd/Large-Platter.jpg",
+    "size": [
+      {
+        "description": "Diameter",
+        "value": "6cm"
+      },
+      {
+        "description": "Height",
+        "value": "13cm"
+      }
+    ],
+    "price": 78.36,
+    "sellPrice": 68.36,
+    "shipping": 4.99
+  },
+
+  {
+    "key": "B002RL8IYC",
+    "category": "HOME DECOR",
+    "name": "GLAZED BOTTLES",
+    "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim voluptatibus aperiam tenetur laborum maxime dolorem culpa ipsa porro!",
+    "stock": 46,
+    "star": 4.5,
+    "starCount": 3045,
+    "img": "https://i.ibb.co/k9V6k5M/serving-bottle.jpg",
+    "size": [
+      {
+        "description": "Diameter",
+        "value": "6cm"
+      },
+      {
+        "description": "Height",
+        "value": "13cm"
+      }
+    ],
+    "price": 58.2,
+    "sellPrice": 42.36,
+    "shipping": 4.99
+  },
+
+  {
+    "key": "B002RL8IYD",
+    "category": "HOME DECOR",
+    "name": "LARGE VASE SET",
+    "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim voluptatibus aperiam tenetur laborum maxime dolorem culpa ipsa porro!",
+    "stock": 50,
+    "star": 5,
+    "starCount": 2045,
+    "img": "https://i.ibb.co/HznBwqj/large-vase.jpg",
+    "size": [
+      {
+        "description": "Diameter",
+        "value": "6cm"
+      },
+      {
+        "description": "Height",
+        "value": "13cm"
+      }
+    ],
+    "price": 59.9,
+    "sellPrice": 45.0,
+    "shipping": 4.99
+  },
+
+  {
+    "key": "B002RL8IYE",
+    "category": "DINNERWARE",
+    "name": "TEA CUPS",
+    "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim voluptatibus aperiam tenetur laborum maxime dolorem culpa ipsa porro!",
+    "stock": 220,
+    "star": 5,
+    "starCount": 745,
+    "img": "https://i.ibb.co/c2kMzn2/tea-cups.jpg",
+    "size": [
+      {
+        "description": "Diameter",
+        "value": "4cm"
+      },
+      {
+        "description": "Height",
+        "value": "10cm"
+      }
+    ],
+    "price": 51.9,
+    "sellPrice": 41.0,
+    "shipping": 4.99
+  },
+
+  {
+    "key": "B002RL8IYF",
+    "category": "DINNERWARE",
+    "name": "SERVING BOWL SET",
+    "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim voluptatibus aperiam tenetur laborum maxime dolorem culpa ipsa porro!",
+    "stock": 220,
+    "star": 5,
+    "starCount": 745,
+    "img": "https://i.ibb.co/g3Mhmyy/large-Serving-Bowl.jpg",
+    "size": [
+      {
+        "description": "Diameter",
+        "value": "7cm"
+      },
+      {
+        "description": "Height",
+        "value": "15cm"
+      }
+    ],
+    "price": 74.9,
+    "sellPrice": 59.0,
+    "shipping": 4.99
+  },
+
+  {
+    "key": "B002RL8IYG",
+    "category": "DINNERWARE",
+    "name": "CERAMIC CONTAINER",
+    "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim voluptatibus aperiam tenetur laborum maxime dolorem culpa ipsa porro!",
+    "stock": 120,
+    "star": 4,
+    "starCount": 645,
+    "img": "https://i.ibb.co/McmQQHp/Serving-pot.jpg",
+    "size": [
+      {
+        "description": "Diameter",
+        "value": "7cm"
+      },
+      {
+        "description": "Height",
+        "value": "15cm"
+      }
+    ],
+    "price": 44.9,
+    "sellPrice": 39.0,
+    "shipping": 4.99
+  },
+
+  {
+    "key": "B002RL8IYH",
+    "category": "HOME DECORE",
+    "name": "SMALL VASE SET",
+    "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim voluptatibus aperiam tenetur laborum maxime dolorem culpa ipsa porro!",
+    "stock": 920,
+    "star": 4.5,
+    "starCount": 1133,
+    "img": "https://i.ibb.co/P6wr5TM/small-vase.jpg",
+    "size": [
+      {
+        "description": "Diameter",
+        "value": "7cm"
+      },
+      {
+        "description": "Height",
+        "value": "15cm"
+      }
+    ],
+    "price": 63.5,
+    "sellPrice": 53.0,
+    "shipping": 4.99
+  },
+
+  {
+    "key": "B002RL8IYI",
+    "category": "DINNERWARE",
+    "name": "COFFEE CUPS",
+    "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim voluptatibus aperiam tenetur laborum maxime dolorem culpa ipsa porro!",
+    "stock": 3572,
+    "star": 5,
+    "starCount": 2733,
+    "img": "https://i.ibb.co/ZNB3dPV/Coffee-Cups.jpg",
+    "size": [
+      {
+        "description": "Diameter",
+        "value": "7cm"
+      },
+      {
+        "description": "Height",
+        "value": "15cm"
+      }
+    ],
+    "price": 39.5,
+    "sellPrice": 33.0,
+    "shipping": 4.99
+  },
+
+  {
+    "key": "B002RL8IYJ",
+    "category": "HOME DECOR",
+    "name": "RUSTIC VASE SET",
+    "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim voluptatibus aperiam tenetur laborum maxime dolorem culpa ipsa porro!",
+    "stock": 2572,
+    "star": 5,
+    "starCount": 1733,
+    "img": "https://i.ibb.co/KVYJLs1/Large-Platter-set.jpg",
+    "size": [
+      {
+        "description": "Diameter",
+        "value": "7cm"
+      },
+      {
+        "description": "Height",
+        "value": "15cm"
+      }
+    ],
+    "price": 79.5,
+    "sellPrice": 68.0,
+    "shipping": 4.99
+  },
+
+  {
+    "key": "B002RL8IYK",
+    "category": "DINNERWARE",
+    "name": "SMALL CUPS",
+    "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim voluptatibus aperiam tenetur laborum maxime dolorem culpa ipsa porro!",
+    "stock": 3572,
+    "star": 4,
+    "starCount": 1431,
+    "img": "https://i.ibb.co/DfYYzbC/small-cups.jpg",
+    "size": [
+      {
+        "description": "Diameter",
+        "value": "7cm"
+      },
+      {
+        "description": "Height",
+        "value": "15cm"
+      }
+    ],
+    "price": 29.5,
+    "sellPrice": 23.0,
+    "shipping": 4.99
+  },
+
+  {
+    "key": "B002RL8IYL",
+    "category": "DINNERWARE",
+    "name": "SOUP BOWL",
+    "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim voluptatibus aperiam tenetur laborum maxime dolorem culpa ipsa porro!",
+    "stock": 1572,
+    "star": 5,
+    "starCount": 2431,
+    "img": "https://i.ibb.co/Wxyd8vd/soup-bowl.jpg",
+    "size": [
+      {
+        "description": "Diameter",
+        "value": "7cm"
+      },
+      {
+        "description": "Height",
+        "value": "15cm"
+      }
+    ],
+    "price": 49.5,
+    "sellPrice": 43.0,
+    "shipping": 4.99
+  }
+]

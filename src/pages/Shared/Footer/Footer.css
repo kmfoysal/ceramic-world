@@ -1,0 +1,53 @@
+.footer {
+  background-color: #e9e8e6;
+  padding: 80px 0;
+}
+
+.footer h2 {
+  font-size: 24px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 30px;
+}
+
+.footer h5 {
+  font-size: 18px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 30px;
+}
+
+.footer p {
+  color: #acacac;
+}
+
+.footer ul {
+  padding: 0;
+}
+
+.footer ul li {
+  list-style: none;
+  color: #acacac;
+  line-height: 1.7;
+}
+
+.footer ul li:hover {
+  color: #827b75;
+  transition: linear 0.4s;
+}
+
+.normal-btn {
+  background-color: #827b75;
+  color: #fff;
+  font-size: 14px;
+  border: 1px solid #827b75;
+  padding: 10px 20px;
+  letter-spacing: 1.5px;
+}
+
+.normal-btn:hover {
+  background-color: transparent;
+  color: #827b75;
+  transition: linear 0.4s;
+}
