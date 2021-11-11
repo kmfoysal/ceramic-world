@@ -17,6 +17,9 @@ const Header = () => {
                       <Nav.Link href="#link">Shop</Nav.Link>
                     </NavLink>
                     <Nav.Link href="#link">Contact</Nav.Link>
+                    <NavLink to='/login' style={{textDecoration:'none'}}>
+                      <Nav.Link href="#link">Login</Nav.Link>
+                    </NavLink>
                 </Nav>
                 </Navbar.Collapse>
             </Container>
