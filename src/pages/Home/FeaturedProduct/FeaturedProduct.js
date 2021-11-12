@@ -1,7 +1,8 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const FeaturedProduct = (props) => {
-    const {name, price,description,img} = props.product;
+    const {key, name, price,description,img} = props.product;
     return (
         <div>
             <div class="card border-0 mb-3">
@@ -10,7 +11,9 @@ const FeaturedProduct = (props) => {
                     <h4 class="card-title my-3">{name}</h4>
                     <h5 style={{color:'#827b75'}}>${price}</h5>
                     <p class="card-text" style={{color:'#acacac'}}>{description}</p>
-                    <button class="normal-btn">BUY NOW</button>
+                    <Link to={`/productDetails/${key}`}>
+                       <button class="normal-btn">BUY NOW</button>
+                    </Link>
                 </div>
             </div>
         </div>

@@ -1,15 +1,12 @@
 import React from 'react';
 import useProducts from '../../hooks/useProducts';
 import FeaturedProduct from '../Home/FeaturedProduct/FeaturedProduct';
-import Footer from '../Shared/Footer/Footer';
-import Header from '../Shared/Header/Header';
 
 const Shop = () => {
     const [products] = useProducts();
 
     return (
         <div>
-            <Header></Header>
             <div className='py-5'>
                 <h2 className='my-3 fs-1 text-center'>ALL PRODUCTS</h2>
                 <hr style={{width:'150px', margin:'auto',height:'2px'}} className='mb-5' />
@@ -24,7 +21,6 @@ const Shop = () => {
                     </div>
                 </div>
             </div>
-            <Footer></Footer>
         </div>
     );
 };
