@@ -2,13 +2,15 @@ import * as React from 'react';
 import { Nav } from 'react-bootstrap';
 import { NavLink, Route, Switch, useRouteMatch } from 'react-router-dom';
 import useAuth from '../../../hooks/useAuth';
+import AdminRoute from '../../Authentication/Login/AdminRoute/AdminRoute';
+import MakeAdmin from '../MakeAdmin/MakeAdmin';
 import MyOrders from '../MyOrders/MyOrders';
 import Payment from '../Payment/Payment';
 import Review from '../Review/Review';
 import './Dashboard.css';
 
 const Dashboard = () => {
-    const {user} = useAuth();
+    const {user, admin} = useAuth();
     let { path, url } = useRouteMatch();
 
     return (
@@ -29,33 +31,42 @@ const Dashboard = () => {
                       <h4 className='text-center mb-5'>CERAMIC WORLD</h4>
                   </NavLink>
     
-                  <Nav className="nav nav-pills flex-column mb-auto text-white">
+                   <Nav className="nav nav-pills flex-column mb-auto text-white">
                     <NavLink to={`${url}`} style={{textDecoration:'none'}}>
                        <button className='btn shadow-none text-white'>Dashboard</button>
                     </NavLink>
-                    <NavLink to={`${url}/payment`} style={{textDecoration:'none'}}>
-                      <button className='btn shadow-none text-white'>Payment</button>
-                    </NavLink>
-                    <NavLink to={`${url}/myOrder`} style={{textDecoration:'none'}}>
-                      <button className='btn shadow-none text-white'>My Orders</button>
-                    </NavLink>
-                    <NavLink to={`${url}/review`} style={{textDecoration:'none'}}>
-                       <button className='btn shadow-none text-white'>Review</button>
-                    </NavLink>
-                    <NavLink to={`${url}/manageAllOrders`} style={{textDecoration:'none'}}>
-                      <Nav.Link className='text-white'>Manage All Orders</Nav.Link>
-                    </NavLink>
-                    <NavLink to={`${url}/addProduct`} style={{textDecoration:'none'}}>
-                      <Nav.Link className='text-white'>Add Product</Nav.Link>
-                    </NavLink>
-                    <NavLink to={`${url}/makeAdmin`} style={{textDecoration:'none'}}>
-                      <Nav.Link className='text-white'>Make Admin</Nav.Link>
-                    </NavLink>
-                    <NavLink to={`${url}/manageProducts`} style={{textDecoration:'none'}}>
-                      <Nav.Link className='text-white'>Manage Products</Nav.Link>
-                    </NavLink>
+
+                    {
+                      admin ? <div className='d-flex flex-column'>
+                               <NavLink to={`${url}/manageAllOrders`} style={{textDecoration:'none'}}>
+                                  <button className='btn shadow-none text-white'>Manage All Orders</button>
+                               </NavLink>
+                                <NavLink to={`${url}/addProduct`} style={{textDecoration:'none'}}>
+                                   <button className='btn shadow-none text-white'>Add Product</button>
+                                </NavLink>
+                                <NavLink to={`${url}/makeAdmin`} style={{textDecoration:'none'}}>
+                                  <button className='btn shadow-none text-white'>Make Admin</button>
+                                </NavLink>
+                                <NavLink to={`${url}/manageProducts`} style={{textDecoration:'none'}}>
+                                  <button className='btn shadow-none text-white'>Manage Products</button>
+                                </NavLink>
+                              </div>
+                              :
+                              <div className='d-flex flex-column'>
+                                <NavLink to={`${url}/payment`} style={{textDecoration:'none'}}>
+                                    <button className='btn shadow-none text-white'>Payment</button>
+                                </NavLink>
+                                <NavLink to={`${url}/myOrder`} style={{textDecoration:'none'}}>
+                                    <button className='btn shadow-none text-white'>My Orders</button>
+                                </NavLink>
+                                <NavLink to={`${url}/review`} style={{textDecoration:'none'}}>
+                                    <button className='btn shadow-none text-white'>Review</button>
+                                </NavLink>
+                              </div>
+                    }
+
                     <NavLink to='/' style={{textDecoration:'none'}}>
-                      <Nav.Link className='text-white'>Logout</Nav.Link>
+                       <button className='btn shadow-none text-white'>Logout</button>
                     </NavLink>
                 </Nav>
                 </div>
@@ -81,7 +92,9 @@ const Dashboard = () => {
                         <Route path={`${path}/payment`}>
                             <Payment></Payment>
                         </Route>
-                        
+                        <AdminRoute path={`${path}/makeAdmin`}>
+                            <MakeAdmin></MakeAdmin>
+                        </AdminRoute>                       
                     </Switch>
                 </div>
               </div>
