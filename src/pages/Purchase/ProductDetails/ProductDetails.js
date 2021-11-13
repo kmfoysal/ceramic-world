@@ -45,7 +45,9 @@ const ProductDetails = () => {
         .then(res => res.json())
         .then(data => {
           if(data.insertedId){
-            alert('Place Order Successfully')
+            <div class="alert alert-success" role="alert">
+                Place Order Successfully
+            </div>
           }
         })
           e.preventDefault();

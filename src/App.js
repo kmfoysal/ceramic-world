@@ -4,6 +4,7 @@ import AuthProvider from './contexts/AuthProvider/AuthProvider';
 import Login from './pages/Authentication/Login/Login';
 import PrivateRoute from './pages/Authentication/Login/PrivateRoute/PrivateRoute';
 import Register from './pages/Authentication/Register/Register';
+import Dashboard from './pages/Dashboard/Dashboard/Dashboard';
 import Home from './pages/Home/Home/Home';
 import ProductDetails from './pages/Purchase/ProductDetails/ProductDetails';
 import Footer from './pages/Shared/Footer/Footer';
@@ -27,6 +28,9 @@ function App() {
            </Route>
            <PrivateRoute path='/productDetails/:productKey'>
              <ProductDetails></ProductDetails>
+           </PrivateRoute>
+           <PrivateRoute path='/dashboard'>
+             <Dashboard></Dashboard>
            </PrivateRoute>
            <Route path='/login'>
              <Login></Login>

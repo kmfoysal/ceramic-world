@@ -22,7 +22,10 @@ const Header = () => {
                     <Nav.Link href="#link">Contact</Nav.Link>
 
                     { user?.email ?
-                        <div>
+                        <div className='d-flex'>
+                           <NavLink to='/dashboard' style={{textDecoration:'none'}}>
+                              <Nav.Link on href="#link">Dashboard</Nav.Link>
+                           </NavLink>
                            <Nav.Link onClick={logOut} href="#link">Logout</Nav.Link>
                         </div>
                         :
