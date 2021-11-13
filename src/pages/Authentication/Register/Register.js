@@ -33,29 +33,29 @@ const Register = () => {
                         <h3 className='text-center mb-5'>Please Register</h3>
 
                         {!isLoading && <form onSubmit={handleSubmit} className='w-100'>
-                            <div class="form-floating mb-4">
-                                <input type="text" name='name' class="form-control border-start-0 border-end-0 border-top-0 border-bottom-1 border-dark rounded-0 px-0 bg-transparent shadow-none" id="floatingInput" placeholder='Name' required onBlur={handleOnBlur}/>
+                            <div className="form-floating mb-4">
+                                <input type="text" name='name' className="form-control border-start-0 border-end-0 border-top-0 border-bottom-1 border-dark rounded-0 px-0 bg-transparent shadow-none" id="floatingInput" placeholder='Name' required onBlur={handleOnBlur}/>
                                 <label for="floatingInput" className='p-0'>Enter Your Name</label>
                             </div>
-                            <div class="form-floating mb-4">
-                                <input type="email" name='email' class="form-control border-start-0 border-end-0 border-top-0 border-bottom-1 border-dark rounded-0 px-0 bg-transparent shadow-none" id="floatingInput" placeholder='Email' required onBlur={handleOnBlur}/>
+                            <div className="form-floating mb-4">
+                                <input type="email" name='email' className="form-control border-start-0 border-end-0 border-top-0 border-bottom-1 border-dark rounded-0 px-0 bg-transparent shadow-none" id="floatingInput" placeholder='Email' required onBlur={handleOnBlur}/>
                                 <label for="floatingInput" className='p-0'>Enter Your Email Address</label>
                             </div>
-                            <div class="form-floating mb-4">
-                                <input type="password" name='password' class="form-control border-start-0 border-end-0 border-top-0 border-bottom-1 border-dark rounded-0 px-0 bg-transparent shadow-none" id="floatingInput" placeholder='Password' required onBlur={handleOnBlur}/>
+                            <div className="form-floating mb-4">
+                                <input type="password" name='password' className="form-control border-start-0 border-end-0 border-top-0 border-bottom-1 border-dark rounded-0 px-0 bg-transparent shadow-none" id="floatingInput" placeholder='Password' required onBlur={handleOnBlur}/>
                                 <label for="floatingInput" className='p-0'>Password</label>
                             </div>
-                            <div class="form-floating mb-4">
-                                <input type="password" name='comfirmPassword' class="form-control border-start-0 border-end-0 border-top-0 border-bottom-1 border-dark rounded-0 px-0 bg-transparent shadow-none" id="floatingInput" placeholder='Confirm Password' required onBlur={handleOnBlur}/>
+                            <div className="form-floating mb-4">
+                                <input type="password" name='comfirmPassword' className="form-control border-start-0 border-end-0 border-top-0 border-bottom-1 border-dark rounded-0 px-0 bg-transparent shadow-none" id="floatingInput" placeholder='Confirm Password' required onBlur={handleOnBlur}/>
                                 <label for="floatingInput" className='p-0'>Confirm Password</label>
                             </div>
                             <button type='submit' className='normal-btn w-100 mb-4'>REGISTER</button>
                         </form>}
 
                         {
-                           isLoading && <div class="d-flex justify-content-center">
-                                            <div class="spinner-grow text-warning" role="status">
-                                                <span class="visually-hidden">Loading...</span>
+                           isLoading && <div className="d-flex justify-content-center">
+                                            <div className="spinner-grow text-warning" role="status">
+                                                <span className="visually-hidden">Loading...</span>
                                             </div>
                                         </div>
                        }
@@ -65,13 +65,13 @@ const Register = () => {
                         </NavLink>
 
                         {
-                           user?.email && <div class="alert alert-success" role="alert">
+                           user?.email && <div className="alert alert-success" role="alert">
                                             Register Successfully
                                           </div>
                        }
 
                        {
-                           authError && <div class="alert alert-success" role="alert">
+                           authError && <div className="alert alert-success" role="alert">
                                             {authError}
                                         </div>
                        }

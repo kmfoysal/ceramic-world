@@ -17,11 +17,11 @@ const Dashboard = () => {
     let { path, url } = useRouteMatch();
 
     return (
-        <div class="container-fluid p-0">
-            <div class="row g-0">
-              <div class="col-xl-2 col-lg-3 col-md-4">
+        <div className="container-fluid p-0">
+            <div className="row g-0">
+              <div className="col-xl-2 col-lg-3 col-md-4">
                 <div
-                  class="
+                  className="
                     d-flex
                     flex-column flex-shrink-0
                     p-3
@@ -74,11 +74,11 @@ const Dashboard = () => {
                 </Nav>
                 </div>
               </div>
-              <div class="col-xl-10 col-lg-9 col-md-8">
-                <div class="row g-0 top-box py-2" style={{backgroundColor:'#e9e8e6'}}>
+              <div className="col-xl-10 col-lg-9 col-md-8">
+                <div className="row g-0 top-box py-2" style={{backgroundColor:'#e9e8e6'}}>
                     <h5 className='text-center'>Welcome {user.displayName} Into Dashboard</h5>
                 </div>
-                <div class="row g-0 p-4 m-4 rounded-3 shadow-lg" style={{}}>
+                <div className="row g-0 p-4 m-4 rounded-3 shadow-lg" style={{}}>
                     <Switch>
                         <Route exact path={path}>
                             <MyOrders></MyOrders>

@@ -19,7 +19,6 @@ const Header = () => {
                     <NavLink to='/shop' style={{textDecoration:'none'}}>
                       <Nav.Link href="#link">Shop</Nav.Link>
                     </NavLink>
-                    <Nav.Link href="#link">Contact</Nav.Link>
 
                     { user?.email ?
                         <div className='d-flex'>

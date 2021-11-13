@@ -11,7 +11,7 @@ const HeroArea = () => {
                     <div className='content'>
                         <h1>HANDMADE
                             <br />
-                        BANGLADESHI CERAMICS</h1>
+                        TRADITIONAL CERAMICS</h1>
                         <h5>Timeless Pieces For Everyday Rituals</h5>
                         <NavLink to='/shop' className='text-decoration-none'>
                           <button className='common-btn'>SHOP NOW</button>

@@ -1,14 +1,19 @@
 import React from 'react';
+import Rating from 'react-rating';
 
-const singleReview = (props) => {
+const SingleReview = (props) => {
     const {customerName, review, rating} = props.review;
     return (
-        <div class="carousel-item active text-center">
-            <p className='text-capitalize mx-auto'>“{review}”</p>
+        <div className="carousel-item text-center">
+            <p className='text-capitalize fs-5 mx-auto'>“{review}”</p>
             <p className='fs-3 mx-auto'>{customerName}</p>
-            <p className='text-xl text-gray-500 font-medium mb-4 mx-auto'>Rating : {rating}</p>
+            <Rating 
+                    initialRating={rating} 
+                    readonly
+                    emptySymbol={<i className="far fa-star fx-3 fa-2x text-warning"></i>}
+                    fullSymbol={<i className="fas fa-star fa-2x text-warning"></i>} />
         </div>
     );
 };
 
-export default singleReview;
+export default SingleReview;

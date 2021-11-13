@@ -49,8 +49,8 @@ const Footer = () => {
                     </div>
                     <div className="col-lg-3 col-md-6">
                       <h5>JOIN OUR NEWSLETTER</h5>
-                        <div class="form-floating mb-3">
-                            <input type="email" class="form-control border-start-0 border-end-0 border-top-0 border-bottom-1 border-dark rounded-0 px-0 bg-transparent shadow-none" id="floatingInput" placeholder='Email'/>
+                        <div className="form-floating mb-3">
+                            <input type="email" className="form-control border-start-0 border-end-0 border-top-0 border-bottom-1 border-dark rounded-0 px-0 bg-transparent shadow-none" id="floatingInput" placeholder='Email'/>
                             <label for="floatingInput" className='p-0'>Enter Your Email Address</label>
                         </div>
                         <button className='normal-btn'>SUBSCRIBE</button>

@@ -8,14 +8,12 @@ import Dashboard from './pages/Dashboard/Dashboard/Dashboard';
 import Home from './pages/Home/Home/Home';
 import ProductDetails from './pages/Purchase/ProductDetails/ProductDetails';
 import Footer from './pages/Shared/Footer/Footer';
-import Header from './pages/Shared/Header/Header';
 import Shop from './pages/Shop/Shop';
 
 function App() {
   return (
     <AuthProvider>
       <BrowserRouter>
-      <Header></Header>
          <Switch>
            <Route exact path='/'>
              <Home></Home>
