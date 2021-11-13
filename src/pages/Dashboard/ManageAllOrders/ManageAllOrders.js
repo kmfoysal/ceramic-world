@@ -1,19 +1,17 @@
 import React, { useEffect, useState } from 'react';
 import { Table } from 'react-bootstrap';
-import useAuth from '../../../hooks/useAuth';
 
-const MyOrders = () => {
-    const {user} = useAuth()
-    const [myOrders, setMyOrders] = useState([]);
+const ManageAllOrders = () => {
+    const [allOrders, setAllOrders] = useState([]);
 
     useEffect(()=>{
-        const url = `http://localhost:5000/orders?email=${user.email}`;
+        const url = `http://localhost:5000/allOrders`;
         fetch(url)
         .then(res => res.json())
-        .then(data => setMyOrders(data))
-    },[user.email])
+        .then(data => setAllOrders(data))
+    },[])
 
-    const handleMyOrders = id =>{
+    const handleorders = id =>{
         const proceed = window.confirm('Are you sure want to delete ?')
         if(proceed){
             const url = `http://localhost:5000/orders/${id}`;
@@ -24,8 +22,8 @@ const MyOrders = () => {
         .then(data => {
             if(data.deletedCount > 0){
                 alert('Successfully Deleted')
-                const remainingOrders = myOrders.filter(myOrder => myOrder._id !== id);
-                setMyOrders(remainingOrders);
+                const remainingOrders = allOrders.filter(order => order._id !== id);
+                setAllOrders(remainingOrders);
             }
         })
         }
@@ -33,8 +31,8 @@ const MyOrders = () => {
 
     return (
         <div className='text-center'>
-            <h3 className='mb-4'>Manage My Orders</h3>
-            <h5 className='mb-3'>Total Orders : {myOrders.length}</h5>
+            <h3 className='mb-4'>Manage All Orders</h3>
+            <h5 className='mb-3'>Total Orders : {allOrders.length}</h5>
 
             <div className='overflow-auto'>
                 <Table bordered hover>
@@ -51,16 +49,16 @@ const MyOrders = () => {
                     </thead>
                     <tbody>
                         {
-                        myOrders.filter(order=>order.email === user.email).map(myOrder => 
-                        <tr key={myOrder._id}>
-                        <td>{myOrder.ProductName}</td>
-                        <td>{myOrder.address}</td>
-                        <td>{myOrder.phone}</td>
-                        <td>${myOrder.price}</td>
-                        <td>${myOrder.shipping}</td>
-                        <td>${myOrder.totalPrice}</td>
+                        allOrders.map(order => 
+                        <tr key={order._id}>
+                        <td>{order.ProductName}</td>
+                        <td>{order.address}</td>
+                        <td>{order.phone}</td>
+                        <td>${order.price}</td>
+                        <td>${order.shipping}</td>
+                        <td>${order.totalPrice}</td>
                         <td>
-                            <button className='btn btn-sm btn-danger' onClick={()=>handleMyOrders(myOrder._id)}>Delete Order</button>
+                            <button className='btn btn-sm btn-danger' onClick={()=>handleorders(order._id)}>Delete Order</button>
                         </td>
                         </tr>)
                         }
@@ -71,4 +69,4 @@ const MyOrders = () => {
     );
 };
 
-export default MyOrders;
+export default ManageAllOrders;

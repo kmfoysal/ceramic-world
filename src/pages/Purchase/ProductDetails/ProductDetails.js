@@ -13,7 +13,7 @@ const ProductDetails = () => {
 
     const singleDetails = products?.find(product => product.key === productKey);
 
-    const totalPrice = parseInt(singleDetails?.shipping) + parseInt(singleDetails?.price);
+    const totalPrice = parseFloat(singleDetails?.shipping + singleDetails?.price).toFixed(2);
     
 
     const handleOnBlur= e => {
@@ -63,16 +63,12 @@ const ProductDetails = () => {
                     <img src={singleDetails?.img} className="card-img-top border-2 border-bottom border-dark" alt="img" style={{height:'400px', objectFit:'cover'}} />
                     <div className="card-body">
                         <div className='d-flex'>
-                            <p className='me-3'><strong>SKU :</strong> {singleDetails?.key} </p>
-                            <p><strong>CATEGORY :</strong> {singleDetails?.category} </p>
+                            <p className='me-3 text-uppercase'><strong>SKU :</strong> {singleDetails?.key} </p>
+                            <p className='text-uppercase'><strong>CATEGORY :</strong> {singleDetails?.category} </p>
                         </div>
-                        <h4 className="card-title fs-2 my-3">{singleDetails?.name}</h4>
+                        <h4 className="card-title text-uppercase fs-2 my-3">{singleDetails?.name}</h4>
                         <h5 style={{color:'#827b75'}}>${singleDetails?.price}</h5>
                         <p className="card-text" style={{color:'#acacac'}}>{singleDetails?.description}</p>
-                        <div className='d-flex'>
-                            <p className="me-2">Diameter {singleDetails?.size[0].value},</p>
-                            <p className="">Height {singleDetails?.size[1].value}</p>
-                        </div>
                     </div>
                     </div>
                 </div>
@@ -102,10 +98,10 @@ const ProductDetails = () => {
                                 <label for="floatingInput" className='p-0'>Product Price</label>
                             </div>
                             <div className="form-floating mb-4">
-                                <input type="text" name='shipping' className="form-control border-start-0 border-end-0 border-top-0 border-bottom-1 border-dark rounded-0 px-0 bg-transparent shadow-none" id="floatingInput" placeholder='Shipping' required defaultValue={singleDetails?.shipping} disabled/>
+                                <input type="text" name='shipping' className="form-control border-start-0 border-end-0 border-top-0 border-bottom-1 border-dark rounded-0 px-0 bg-transparent shadow-none" id="floatingInput" placeholder='Shipping' required defaultValue= {singleDetails?.shipping} disabled/>
                                 <label for="floatingInput" className='p-0'>Shipping Chargre</label>
                             </div>
-                            <div className="form-floating mb-4">
+                            <div className="form-floating mb-4 d-none">
                                 <input type="text" name='total' className="form-control border-start-0 border-end-0 border-top-0 border-bottom-1 border-dark rounded-0 px-0 bg-transparent shadow-none" id="floatingInput" placeholder='Total' required defaultValue={totalPrice} disabled/>
                                 <label for="floatingInput" className='p-0'>Total Price</label>
                             </div>

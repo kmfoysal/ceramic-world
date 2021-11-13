@@ -1,0 +1,26 @@
+.add-product form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 55%;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.add-product form input,
+textarea,
+select {
+  width: 100%;
+  padding: 10px 8px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+@media (max-width: 575.98px) {
+  .add-product form {
+    width: 100%;
+    padding: 10px;
+  }
+}

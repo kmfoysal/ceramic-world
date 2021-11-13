@@ -3,14 +3,17 @@ import { Nav } from 'react-bootstrap';
 import { NavLink, Route, Switch, useRouteMatch } from 'react-router-dom';
 import useAuth from '../../../hooks/useAuth';
 import AdminRoute from '../../Authentication/Login/AdminRoute/AdminRoute';
+import AddProduct from '../AddProduct/AddProduct';
+import AddReview from '../AddReview/AddReview';
 import MakeAdmin from '../MakeAdmin/MakeAdmin';
+import ManageAllOrders from '../ManageAllOrders/ManageAllOrders';
+import ManageProducts from '../ManageProducts/ManageProducts';
 import MyOrders from '../MyOrders/MyOrders';
 import Payment from '../Payment/Payment';
-import Review from '../Review/Review';
 import './Dashboard.css';
 
 const Dashboard = () => {
-    const {user, admin} = useAuth();
+    const {user, admin, logOut} = useAuth();
     let { path, url } = useRouteMatch();
 
     return (
@@ -65,8 +68,8 @@ const Dashboard = () => {
                               </div>
                     }
 
-                    <NavLink to='/' style={{textDecoration:'none'}}>
-                       <button className='btn shadow-none text-white'>Logout</button>
+                    <NavLink to='' style={{textDecoration:'none'}}>
+                       <button onClick={logOut} className='btn shadow-none text-white'>Logout</button>
                     </NavLink>
                 </Nav>
                 </div>
@@ -75,7 +78,7 @@ const Dashboard = () => {
                 <div class="row g-0 top-box py-2" style={{backgroundColor:'#e9e8e6'}}>
                     <h5 className='text-center'>Welcome {user.displayName} Into Dashboard</h5>
                 </div>
-                <div class="row g-0 p-5 m-5 rounded-3 shadow-lg" style={{}}>
+                <div class="row g-0 p-4 m-4 rounded-3 shadow-lg" style={{}}>
                     <Switch>
                         <Route exact path={path}>
                             <MyOrders></MyOrders>
@@ -87,10 +90,19 @@ const Dashboard = () => {
                             <MyOrders></MyOrders>
                         </Route>
                         <Route path={`${path}/review`}>
-                            <Review></Review>
+                            <AddReview></AddReview>
                         </Route>
                         <Route path={`${path}/payment`}>
                             <Payment></Payment>
+                        </Route>
+                        <Route path={`${path}/manageAllOrders`}>
+                            <ManageAllOrders></ManageAllOrders>
+                        </Route>
+                        <Route path={`${path}/addProduct`}>
+                            <AddProduct></AddProduct>
+                        </Route>
+                        <Route path={`${path}/manageProducts`}>
+                            <ManageProducts></ManageProducts>
                         </Route>
                         <AdminRoute path={`${path}/makeAdmin`}>
                             <MakeAdmin></MakeAdmin>
