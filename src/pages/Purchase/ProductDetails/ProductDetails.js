@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useParams } from 'react-router';
 import useAuth from '../../../hooks/useAuth';
 import useProducts from '../../../hooks/useProducts';
+import Header from '../../Shared/Header/Header';
 
 const ProductDetails = () => {
     const [products] = useProducts();
@@ -56,7 +57,9 @@ const ProductDetails = () => {
 
 
     return (
-        <div className='container py-5'>
+        <div>
+            <Header></Header>
+            <div className='container py-5'>
             <div className="row">
                 <div className="col-md-6">
                     <div className="card border-0 mb-3">
@@ -105,15 +108,12 @@ const ProductDetails = () => {
                                 <input type="text" name='total' className="form-control border-start-0 border-end-0 border-top-0 border-bottom-1 border-dark rounded-0 px-0 bg-transparent shadow-none" id="floatingInput" placeholder='Total' required defaultValue={totalPrice} disabled/>
                                 <label for="floatingInput" className='p-0'>Total Price</label>
                             </div>
-                            {/* <div className="form-floating mb-4 d-none">
-                                <input type="text" name='status' className="form-control border-start-0 border-end-0 border-top-0 border-bottom-1 border-dark rounded-0 px-0 bg-transparent shadow-none" id="floatingInput" placeholder='Status' required defaultValue='Pending'/>
-                                <label for="floatingInput" className='p-0'>Status</label>
-                            </div> */}
                             <button type='submit' className='normal-btn w-100 mb-4'>PLACE ORDER</button>
                         </form>
                     </div>
                 </div>
             </div>
+        </div>
         </div>
     );
 };

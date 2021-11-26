@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { NavLink, useHistory } from 'react-router-dom';
 import useAuth from '../../../hooks/useAuth';
+import Header from '../../Shared/Header/Header';
 import './Register.css';
 
 const Register = () => {
@@ -26,7 +27,9 @@ const Register = () => {
     }
 
     return (
-        <div className='container py-5'>
+        <div>
+            <Header></Header>
+            <div className='container py-5'>
             <div className="row">
                 <div className="col-12">
                     <div className='register-form shadow-sm'>
@@ -79,6 +82,7 @@ const Register = () => {
                     </div>
                 </div>
             </div>
+        </div>
         </div>
     );
 };

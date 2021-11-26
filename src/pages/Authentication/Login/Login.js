@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { NavLink, useHistory, useLocation } from 'react-router-dom';
 import useAuth from '../../../hooks/useAuth';
+import Header from '../../Shared/Header/Header';
 
 const Login = () => {
     const [loginData, setLoginData] = useState({});
@@ -27,7 +28,9 @@ const Login = () => {
     }
 
     return (
-        <div className='container py-5'>
+        <div>
+            <Header></Header>
+            <div className='container py-5'>
             <div className="row">
                 <div className="col-12">
                     <div className='register-form shadow-sm'>
@@ -72,6 +75,7 @@ const Login = () => {
                     </div>
                 </div>
             </div>
+        </div>
         </div>
     );
 };
